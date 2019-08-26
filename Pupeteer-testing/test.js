@@ -29,9 +29,9 @@ describe('Registro y Login', function () {
 
             await page.click('button[class="btn btn-primary"]');
 
-
-            await page.screenshot({path: 'afterRegister.png'});
             await delay(2000)
+            await page.screenshot({path: 'afterRegister.png'});
+
             const element1 = await page.$eval('div[class="alert alert-success"]', el => el.textContent);
 
             await page.focus('input[formcontrolname=username]');
