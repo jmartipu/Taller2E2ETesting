@@ -10,7 +10,7 @@ describe('Registro y Login', function () {
                 // Headfull
                 // const browser = await puppeteer.launch({headless: false});
                 // Headless
-                const browser = await puppeteer.launch({headless: false});
+                const browser = await puppeteer.launch({headless: true});
                 const page = await browser.newPage();
                 await page.goto('https://angular-6-registration-login-example.stackblitz.io/register');
 
