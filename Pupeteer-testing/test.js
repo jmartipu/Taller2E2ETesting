@@ -8,9 +8,9 @@ describe('Registro y Login', function () {
             for (i = 0; i < 20; i++) {
                 this.timeout(60000)
                 // Headfull
-                const browser = await puppeteer.launch({headless: false});
-                // Headless
                 // const browser = await puppeteer.launch({headless: false});
+                // Headless
+                const browser = await puppeteer.launch({headless: false});
                 const page = await browser.newPage();
                 await page.goto('https://angular-6-registration-login-example.stackblitz.io/register');
 
