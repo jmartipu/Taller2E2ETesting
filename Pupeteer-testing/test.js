@@ -1,10 +1,11 @@
 const puppeteer = require('puppeteer');
 const assert = require( 'chai' ).assert;
 const expect = require('chai').expect;
-for (i = 0; i < 20; i++) {
-    describe('Registro y Login', function () {
-        describe('resolve()', function () {
-            it('Registro Exitoso', async function () {
+
+describe('Registro y Login', function () {
+    describe('resolve()', function () {
+        it('Registro Exitoso', async function () {
+            for (i = 0; i < 20; i++) {
                 this.timeout(60000)
                 // Headfull
                 const browser = await puppeteer.launch({headless: false});
@@ -57,10 +58,11 @@ for (i = 0; i < 20; i++) {
                 expect(result).to.be.equal('Registration successful');
                 var result = await Promise.resolve(element2);
                 expect(result).to.be.equal('Hi testing' + i.toString() + '!');
-            });
+            }
         });
     });
-}
+});
+
 
 function delay(time) {
    return new Promise(function(resolve) {
