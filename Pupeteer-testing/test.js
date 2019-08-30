@@ -5,7 +5,7 @@ const expect = require('chai').expect;
 describe('Registro y Login', function () {
     describe('resolve()', function () {
         it('Registro Exitoso', async function () {
-            for (i = 0; i < 20; i++) {
+            for (i = 20; i < 40; i++) {
                 this.timeout(60000)
                 // Headfull
                 // const browser = await puppeteer.launch({headless: false});
